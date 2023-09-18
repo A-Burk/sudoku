@@ -1,3 +1,5 @@
+import time
+
 # Print current state of puzzle
 def print_puzzle(puzzle):
     for i in range(9):
@@ -6,6 +8,8 @@ def print_puzzle(puzzle):
         #     print(puzzle[i][j])
         #     if (j == 2) or (j == 5):
         #         print('\t\t')
+
+    print()
 
 
 # Find an empty spot in the puzzle
@@ -110,8 +114,31 @@ if __name__ == '__main__':
         [1, 7, -1, -1, -1, -1, -1, -1, 5],
     ]
 
-    print_puzzle(puzzle_advanced)
+    number_choice = input("Pick a number between 1 and 4\n")
     print()
+    puzzle_choice = puzzle_easy
+    match number_choice:
+        case "1":
+            print("You chose the blank puzzle\n")
+            puzzle_choice = puzzle_blank
+        case "2":
+            print("You chose the easy puzzle\n")
+            puzzle_choice = puzzle_easy
+        case "3":
+            print("You chose the unsolvable puzzle\n")
+            puzzle_choice = puzzle_unsolvable
+        case "4":
+            print("You chose the advanced puzzle\n")
+            puzzle_choice = puzzle_advanced
+        case _:
+            print("Invalid input, solving the easy puzzle\n")
 
-    if not(solve_puzzle(puzzle_advanced)):
+    print_puzzle(puzzle_choice)
+
+    tic = time.perf_counter()
+
+    if not(solve_puzzle(puzzle_choice)):
         print("Not solvable")
+
+    toc = time.perf_counter()
+    print(f"Runtime: {toc - tic:0.4f} seconds")

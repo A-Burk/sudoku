@@ -15,11 +15,11 @@ This project is something I wanted to do mostly to have something on my Github. 
 ## How to build on this project for your own uses
 This is a pretty basic project. In it's current state, I would recommend you just make your own. If you wish to use it anyways, I recommend you clone and rename this project.
 
-If you would like to know how to make this project yourself, I recommend that you:
+If you would like to make this project yourself, I recommend that you:
 1. Watch <a href="https://www.youtube.com/watch?v=8ext9G7xspg&t=6715s">this video</a> which explains how to make this project
 2. Recreate the project from memory
 3. Use my list of future feature additions as inspiration for improvements to your project
 ## Find a bug?
 Please submit any issues you find or recommendations for improvements using the issues tab above.
 ## Known issues (work in progress)
-This program is very basic, has no user interaction, and is also lacking in originality. These problems will go away as I continue working on the project.
+This program is very basic, has almost no user interaction, and is also lacking in originality. These problems will go away as I continue working on the project.
